@@ -8,6 +8,18 @@ class AlbumPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              id.toString(),
+              style: TextStyle(fontSize: 20.0, color: Colors.green),
+            ),
+            Text(name),
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text(name),
       ),

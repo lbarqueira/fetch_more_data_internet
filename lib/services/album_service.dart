@@ -17,6 +17,8 @@ Future<Album> fetchAlbum(int id) async {
   }
 }
 
+// fetchAlbums method
+
 Future<List<Album>> fetchAlbums() async {
   final response =
       await http.get('https://jsonplaceholder.typicode.com/albums');
