@@ -10,7 +10,7 @@ void main() async {
   return runApp(
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(
-        isDarkMode: _prefs.getBool('darkTheme') ?? false,
+        isDarkMode: _prefs.getBool('darkTheme') ?? false, // null-aware operator
       ),
       child: MyApp(),
     ),

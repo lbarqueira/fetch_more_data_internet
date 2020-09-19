@@ -19,6 +19,7 @@ class Album {
         title = json['title'] as String;
 }
 
+// https://jsonplaceholder.typicode.com/albums/
 // JSON
 //[ -> list
 //{

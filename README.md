@@ -1,16 +1,17 @@
 # fetch_more_data_internet
 
-A new Flutter project.
+A tutorial Flutter project.
+Networking + Light and Dark Theme (Provider + SharedPreferences) 
 
-## Getting Started
+## Learning topics
 
-This project is a starting point for a Flutter application.
+__Fetching data from the internet__
+Important to read: [Parse JSON in the background](https://flutter.dev/docs/cookbook/networking/background-parsing)
 
-A few resources to get you started if this is your first Flutter project:
+__Light and Dark Theme with Provider - Flutter Explained__
+https://www.youtube.com/watch?v=UC9mgd-gnS0
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+__SharedPreferences for Dark and Light Theme - Flutter Explained__
+https://www.youtube.com/watch?v=LpCbUoahiww
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
