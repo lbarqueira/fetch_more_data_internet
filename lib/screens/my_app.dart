@@ -3,6 +3,7 @@ import 'package:fetch_more_data_internet/providers/theme.dart';
 import 'package:fetch_more_data_internet/services/album_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../services/album_service.dart';
 import 'album_page.dart';
 
 class MyApp extends StatefulWidget {
@@ -16,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    futureAlbums = fetchAlbums();
+    futureAlbums = AlbumService().fetchAlbums();
   }
 
   @override
@@ -44,12 +45,12 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: FutureBuilder<List<Album>>(
             future: futureAlbums,
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return AlbumList(albumList: snapshot.data);
+            builder: (context, asyncSnapshot) {
+              if (asyncSnapshot.hasData) {
+                return AlbumList(albumList: asyncSnapshot.data);
                 //Text(snapshot.data[1].title);
-              } else if (snapshot.hasError) {
-                return Text("${snapshot.error}");
+              } else if (asyncSnapshot.hasError) {
+                return Text("${asyncSnapshot.error}");
               }
 
               // By default, show a loading spinner.
